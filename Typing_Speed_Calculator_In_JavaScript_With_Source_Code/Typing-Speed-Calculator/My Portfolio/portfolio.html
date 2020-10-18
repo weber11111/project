@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anand Nakat's Porfolio</title>
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Kumbh+Sans&family=Ranchers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@500&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@600&family=Fira+Sans:wght@600&family=Poppins:wght@500&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet"> 
+</head>
+
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		color: white;
+		font-size: 2rem;
+	}
+
+	html{
+		font-size: 62.5%;
+		scroll-behavior: smooth;
+	}
+	a:hover{
+		text-decoration: none;
+	}
+
+	.link :hover{
+	cursor: pointer
+}
+
+
+
+/* NAVBAR */	
+.navbar{
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #922C40;
+}
+
+.nav-link,.navbar-brand{
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	font-size: 2rem;
+}
+
+.nav-item .active{
+background-color: transparent !important;
+}
+
+.navbar-brand{
+	font-size: 2.5rem;
+}
+
+
+/* INTRO CONTAINER */
+.intro-container{
+	height: 90vh;
+	background-color: #000000db;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: repeat(3,auto);
+	justify-content: center;
+	margin-top: 5rem;
+}
+
+.intro-heading{
+	grid-area: 1/1/2/4;
+	justify-self: center;
+	color: white;
+	font-size: 3rem;
+	align-self: flex-end;
+}
+.intro-content{
+	color: white;
+	font-size: 4rem;
+	grid-area: 2/1/4/3;
+	align-self: center;
+	justify-self: center;
+}
+
+.intro-img{
+	grid-area: 2/3/4/4;
+	align-self: center;
+	justify-self: center;
+}
+
+.intro-img img{
+	border-radius: 20%;
+	max-width: 100%;
+	height: 35rem;
+}
+/* END OF INTRODUCTION */
+
+
+
+/* EDU CONTAINER */
+.edu-container{
+	    background-color: #2F2440;
+	    width: 100%;
+	    height: 100vh;
+  }
+
+.heading h1{
+	border-bottom: .2rem solid white;
+	width: max-content;
+	font-size: 2.5rem;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.edu-details{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70vh;
+	
+}
+.edu-details h2{
+	font-size: 2rem;
+	font-family: 'Epilogue', sans-serif;
+}
+/* END OF EDUCATION */
+
+
+
+/* SKILLS CONTAINER */
+.skill-container{
+	height: 100vh;
+	background-color: #45567d;
+}
+
+.skills-hobbies{
+	height:80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+}
+
+.skills{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.skills-hobbies h2{
+	font-family: 'Poppins', sans-serif;
+}
+.hobbies{
+	align-self: center;
+}
+
+/* END OF SKILLS */
+
+
+
+
+/* PROJECT CONTAINER */
+.projects-container{
+	background-color: #2F2440;
+	height: auto;
+}
+
+.project-list{
+		display: grid;
+		grid-template-rows: repeat(5,auto);
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 2rem;
+		justify-items: center;
+	}
+
+	.project1{
+		grid-area: 1/1/3/3;
+		position: relative;
+		
+	}
+	.project2{
+		grid-area: 1/3/3/5;
+		position: relative;
+	}
+	.project3{
+		grid-area: 4/1/6/3;
+		position: relative;
+	}
+	.project4{
+		grid-area: 4/3/6/5;
+		position: relative;
+	}
+
+	.project-title{
+		font-size: 2rem;
+		background-color: #303841;
+		padding: .4rem 0;
+		font-family: 'Baloo Tammudu 2', cursive;
+	}
+
+	.project-pic{
+		height: 35rem;
+		width: 60rem;
+		border-top-left-radius: 1rem;
+		border-top-right-radius: 1rem;
+	}
+
+	.project-description{
+		 opacity: 0;
+		 position: absolute;
+		 top: 0;
+		 left: 0;
+		 background-color: rgba(0, 0, 0, 0.8);
+		 height: 100%;
+		 width: 100%;
+		 text-align: center;
+		 transition: linear .3s all;
+		 }
+		
+	.project-description:hover{
+		opacity: 0.8;
+		cursor: pointer;
+	}
+	
+
+
+
+/* END OF PROJECT */	
+
+/* ABOUT CONTAINER */
+
+.about-container{
+	height: 20vh;
+	background-color: #000000db;
+}
+.social-icons{
+	display: flex;
+	flex-direction: row;
+	align-items: center; 
+	justify-content: space-around;
+	height: auto;
+}
+
+.social-icons a span,i{
+	color: #f0f0f0;
+	transition: linear .3s all;
+	font-size: 2.4rem;
+}
+.social-icons a span:hover,i:hover{
+	color: white;
+	transform: scale(1.1);
+}
+
+
+/* MEDIA QUERIES */
+@media(max-width: 998px)
+{
+	html{
+		font-size: 58%;
+	}
+
+	.edu-details{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.project1{
+		grid-area: 1/1/2/5;
+	}
+	.project2{
+		grid-area: 2/1/3/5;
+	}
+	.project3{
+		grid-area: 3/1/4/5;
+	}
+	.project4{
+		grid-area: 4/1/5/5;
+	}
+
+
+}
+
+
+@media(max-width: 768px)
+{
+	html{
+		font-size: 54%;
+	}
+
+	.about-container{
+		height: 40vh;
+	}
+	.social-icons{
+		flex-direction: column;
+		align-items: start;
+		justify-content: space-evenly;
+		height: 80%;
+	}
+}
+
+
+
+@media(max-width: 600px)
+{
+	html{
+		font-size: 52%;
+	}
+
+	.intro-heading{
+		grid-area: 1/1/2/4;
+		align-self: flex-end;
+	}
+
+	.intro-img{
+		grid-area: 2/1/3/4;
+		justify-self: center;
+		align-self: center;
+	}
+
+	.intro-content{
+		grid-area: 3/1/4/4;
+		justify-self: center;
+		align-self: start;
+	}
+}
+
+
+
+@media(max-width: 400px)
+{
+	html{
+		font-size: 46%;
+	}
+
+	.skills{
+		flex-direction: column;
+		align-items: start;
+	}
+	.hobbies{
+		align-self: start;
+	}
+}
+/* Font Family */
+.Kumbh-Sans{
+	font-family: 'Kumbh Sans', sans-serif;
+}
+
+.Josefin-Sans{
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.Fira-Sans{
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.Baloo{
+	font-family: 'Baloo Tammudu 2', cursive;
+} 
+</style>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+<nav class="navbar navbar-expand-md navbar-dark" id="top-nav">
+	<a class="navbar-brand" href="home.php"> My Portfolio </a>
+	    
+	     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	        <span class="navbar-toggler-icon"></span>
+	    </button>
+
+	 
+
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+	  <ul class="navbar-nav nav-pills  ml-auto">
+		    <li class="nav-item mr-3">
+		      <a class="nav-link" href="#intro">Introduction</a>
+		    </li>
+		    <li class="nav-item mr-3">
+		      <a class="nav-link" href="#education">Education</a>
+		    </li>
+		     <li class="nav-item mr-3">
+		      <a class="nav-link" href="#skills">Skills & Hobbies</a>
+		    </li>
+		     <li class="nav-item mr-3">
+		      <a class="nav-link" href="#projects">Projects</a>
+		    </li>
+		    <li class="nav-item mr-3">
+		      <a class="nav-link"  href="#about">About Me</a>
+		    </li>
+	   </ul>
+	</div>
+</nav>
+
+<div class="intro-container px-3" id="intro">
+	
+<div class="intro-heading Baloo"> Anand Nakat</div>
+
+	<div class="intro-content">
+		<p class="" style="font-size: 2.2rem; font-family: 'Epilogue', sans-serif;">Hi there, I'm currently pursuing Bachelor's Degree in Information Technology, at DY Patil College of Engineering. I'm a curious, determined person exploring myself as a Web Developer. I aspire to be a Full Stack (MERN) Developer. You can check further details below.</p>
+	</div>
+
+	<div class="intro-img">
+		
+		<img src="images/myself.jpg" class="image img-fluid">
+
+	</div>
+</div>
+
+<div class="edu-container px-5 py-3" id="education">
+
+	<div class="my-4"> <h1 class="text-center font-weight-bold Baloo" style="font-size: 3rem;"> Education </h1></div> 
+
+	<div class="edu-details">
+
+		<div class="ssc d-flex flex-column my-3">
+			<div class="heading mb-3"> <h1 class="font-weight-bold pb-2"> SSC </h1> </div>
+			<div> <h2>Percentage/Pointer: 10 CGPA</h2> </div>
+			<div> <h2>Board: CBSE Board</h2> </div>
+			<div> <h2>Institute Name: Prabhat Kids School</h2> </div>
+			<div> <h2>Year of Completion: 2016 </h2> </div>
+		</div>
+
+		<div class="degree d-flex flex-column my-3">
+			
+			<div class="heading mb-3"> <h1 class="font-weight-bold pb-2">BE (IT) </h1> </div>
+			<div> <h2>Percentage/Pointer: 9.84 SGPA</h2> </div>
+			<div> <h2>University: Pune University</h2> </div>
+			<div> <h2>Institute Name: DY Patil College of Engineering, Akurdi</h2> </div>
+			<div> <h2>Year of Graduation: 2022 </h2> </div>
+		</div>
+
+		<div class="hsc d-flex flex-column my-3">
+			<div class="heading mb-3"> <h1 class="font-weight-bold pb-2"> HSC </h1> </div>
+			<div> <h2>Percentage/Pointer: 82.41% </h2> </div>
+			<div> <h2>Board: Maharashtra State Board</h2> </div>
+			<div> <h2>Institute Name: Dawale Jr College</h2> </div>
+			<div> <h2>Year of Completion: 2018 </h2> </div>
+		</div>
+
+	</div>	
+
+</div>
+
+<div class="skill-container px-3 py-4" id="skills">
+
+	<div class=" my-5"> <h1 class="text-center font-weight-bold Baloo" style="font-size: 3rem;"> Skills & Hobbies </h1></div> 
+	
+	<div class="skills-hobbies">
+
+			<div class="skills">
+				<div class="technical-skills d-flex flex-column my-5">
+					<div class="heading mb-3"> <h1 class="font-weight-bold pb-2"> Technical Skills </h1> </div>
+					<div class="link"> <a href="certificates/HTML5.pdf"><h2>HTML5</h2></a> </div>
+					<div class="link"> <a href="certificates/CSS3.pdf"><h2>CSS3</h2></a> </div>
+					<div class="link"> <a href="certificates/JavaScript.pdf"><h2>JavaScript/Jquery</h2></a> </div>
+					<div class="link"> <a href="certificates/PHP.pdf"><h2>PHP</h2></a> </div>
+					<div class="link"> <a href="certificates/SQL.pdf"><h2>SQL</h2></a> </div>
+					<div> 			   <h2>  C,C++  </h2> 						  </div>
+					<div class="link"> <a href="certificates/Machine Learning.pdf"><h2>Machine Learning</h2></a> </div>
+					<div class="link"> <a href="certificates/Python.pdf"><h2>Python</h2></a> </div>
+					
+				</div>
+
+
+				<div class="non-technical-skills d-flex flex-column my-5">
+					<div class="heading mb-3"> <h1 class="font-weight-bold pb-2">Non Technical Skills </h1> </div>
+					<div> <h2>Determined</h2></div>
+					<div> <h2>Attentive</h2> </div>
+					<div> <h2>Quick Learner</h2> </div>
+					<div> <h2>Confident</h2> </div>
+					<div> <h2>Perseverance</h2> </div>
+				</div>
+			</div>
+
+			<div class="hobbies">
+				<div class="d-flex flex-column my-5">
+					<div class="heading mb-3"> <h1 class="font-weight-bold pb-2"> Hobbies & Interests </h1> </div>
+					<div> <h2>Creating Websites</h2> </div>
+					<div> <h2>Coding </h2> </div>
+					<div> <h2>Playing Cricket</h2> </div>
+					<div> <h2>Watching Movies/ TV Series</h2> </div>
+					
+				</div>
+			</div>	
+	</div>
+</div>
+
+
+
+<div class="projects-container px-3 py-3" id="projects">
+	
+	<div> <h1 class="text-center font-weight-bold Baloo pt-5" style="font-size: 3rem;"> Projects </h1></div> 
+  
+  	<div class="project-list my-5">
+
+  		<div class="project1">
+  			
+  			<a href=""><img src="images/project1.jpg" class="img-fluid project-pic" alt="Project 1"><div class="text-center  project-title">World Heritage Sites</div></a>
+  			<div class="project-description d-flex align-items-center"> 
+  				<div style="font-size: 2rem;" class="Baloo text"> Dynamic Website with database featuring Best World Heritage Sites, where user can like any site to add it to his Favourites Collection which is stored in database, so accessible any time.
+  				</div>	
+  			</div>
+  		</div>
+
+
+  		<div class="project2">
+  			
+  			<a href=""><img src="images/project2.jpg" class="img-fluid project-pic" alt="Project 2"><div class="text-center  project-title">Typing Speed Calculator</div></a>
+  			<div class="project-description d-flex align-items-center"> 
+  				<div style="font-size: 2rem;" class="Baloo text"> Want to check your Typing Speed?? What are you waiting for, just a click away to test your Speed and Accuracy!!
+  				</div>	
+  			</div>
+
+  		</div>
+
+
+  		<div class="project3">
+  			
+  			<a href="https://anand-nakat.github.io/Music-Player/Music%20Player.html"><img src="images/project3.jpg" class="img-fluid project-pic" alt=""><div class="text-center  project-title">Music Player</div></a>
+  			<div class="project-description d-flex align-items-center"> 
+  				<div style="font-size: 2rem;" class="Baloo text w-100"> Music Player using JavaScript with functionalities:
+  					<ul>
+  					    <li> Play/Pause </li>
+  					    <li> Next/Previous </li>
+  					    <li> Music Playlist </li>
+  					    <li> Active Progress Bar </li>
+  					    <li> Volume Bar </li>
+  					</ul>
+
+  				</div>	
+  			</div>
+
+  		</div>
+
+  	<div class="project4">
+  			
+  			<a href="https://anand-nakat.github.io/Traffic-Rider-Game/Traffic%20Rider.html"><img src="images/project4.jpg" class="img-fluid project-pic" alt=""><div class="text-center  project-title">Traffic Rider Game</div></a>
+  			<div class="project-description d-flex align-items-center"> 
+  				<div style="font-size: 2rem;" class="Baloo text"> Feel you can beat the scorching Traffic..Give this game a try to relive your nostalgia..<br>This game is created using Pure Javascript, without any libraries or Plug-ins.
+  				</div>	
+  			</div>
+
+  	</div>
+
+  		
+	
+	</div>
+
+</div>
+
+
+
+<div class="about-container px-4">
+	
+	<div> <h1 class="text-center font-weight-bold Baloo pt-5" style="font-size: 3rem;"> Let's Work Together.. </h1></div> 
+
+		<div class="social-icons">
+			
+			<div><a class="facebook" href="https://www.facebook.com/profile.php?id=100008843023697">
+				<i class="fa fa-facebook"> <span class="Baloo pl-1"> Facebook </span></i></a>
+			</div>
+			<div><a class="instagram" href="https://www.instagram.com/anand_nakat/">
+				<i class="fa fa-instagram"><span class="Baloo pl-3"><span class="Baloo">Instagram</span></i></a>
+			</div>
+			<div><a class="linkedin" href="https://www.linkedin.com/in/anand-nakat-ab4615155">
+				<i class="fa fa-linkedin"><span class="Baloo pl-3">LinkedIn</span></i></a>
+			</div>
+			<div><a class="linkedin" href="https://github.com/anand-nakat">
+				<i class="fa fa-github"><span class="Baloo pl-3">Github</span></i></a>
+			</div>
+			<div><a class="linkedin" href="https://www.linkedin.com/in/anand-nakat-ab4615155">
+				<i class="fa fa-envelope"><span class="Baloo pl-3">Gmail</span></i></a>
+			</div>
+
+		</div>
+
+
+</div>
+</body>
+</html>
